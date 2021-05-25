@@ -1,0 +1,121 @@
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  background: #4CA1AF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.calculator{
+  background-color: white;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6);
+}
+
+/* display */
+.calculator-display{
+  background-color: #000000;
+  color:white;
+  margin:0;
+  display: flex;
+  border-radius: 10px 10px 0 0 ;
+  justify-content: flex-end;
+}
+
+.calculator-display h1{
+  margin:0;
+  padding: 20px;
+  font-size: 45px;
+  overflow-x: auto;
+  font-family: 'Lucida console', sans-serif;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* buttons */
+.calculator-buttons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+  padding:10px;
+}
+
+.equal-sign{
+  grid-column: -2;
+  grid-row: 3/span 4;
+  background-color: #1f7c07;
+  color:white;
+}
+
+button{
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border-radius: 5px;
+  border:none;
+  cursor: pointer;
+  background-color: rgb(231, 225, 225);
+}
+
+button:hover{
+  filter:brightness(80%);
+}
+
+button:active{
+  transform: translateY(1px);
+}
+
+button:focus{
+  outline: none;
+}
+
+
+.operator,.special_operator{
+  background-color: #797878;
+  color: white;
+  font-size: 30px;
+}
+
+.clear{
+  background-color: rgb(255, 5, 5);
+  color:white;
+}
+
+.del{
+  background-color: #1f7c07;
+  color:white;
+  font-size: 30px;
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+  .calculator{
+    width:95%;
+  }
+}
+
